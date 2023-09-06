@@ -2,3 +2,4 @@ Flask
 Flask-CORS
 pickle-mixin
 pyperclip
+requests
