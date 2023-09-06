@@ -17,8 +17,6 @@ def readInject():
 	fl.close()
 	pyperclip.copy(txt)
 
-
-
 def arrToBarr(arr):
 	x=bytearray(len(arr))
 	for i in range(len(arr)):
