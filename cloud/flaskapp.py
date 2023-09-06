@@ -7,11 +7,12 @@ flpath='.'
 optionsfile=flpath+'/optionsfile.txt'
 ccdfile=flpath+'/ccdfile.txt'
 
-try:
-	os.remove(optionsfile)
-	os.remove(ccdfile)
-except:
-	pass
+def del_old_files():
+	try:
+		os.remove(optionsfile)
+		os.remove(ccdfile)
+	except:
+		pass
 
 app = Flask(__name__)
 CORS(app)
@@ -60,6 +61,7 @@ def writeoptionsfile(options):
 		
 @app.route("/getoptions", methods=["GET","POST"])
 def getoptions():
+	del_old_files()
 	optdatab64=request.form.get('data')
 	writeoptionsfile(optdatab64)
 	res1=getccddata()
