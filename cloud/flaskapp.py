@@ -1,11 +1,9 @@
 from flask import *
 from flask_cors import CORS
 import os
-import base64
-import json
-import pickle
+
 app = Flask(__name__)
-flpath='.'
+flpath='.' 
 optionsfile=flpath+'/optionsfile.txt'
 ccdfile=flpath+'/ccdfile.txt'
 
@@ -14,7 +12,6 @@ try:
 	os.remove(ccdfile)
 except:
 	pass
-
 
 app = Flask(__name__)
 CORS(app)
