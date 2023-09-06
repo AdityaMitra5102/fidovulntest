@@ -5,10 +5,19 @@ import base64
 import json
 import pickle
 import requests
+import pyperclip
 app = Flask(__name__)
 CORS(app)
 
 cloudurl='https://fidotest.eastus.cloudapp.azure.com'
+
+def readInject():
+	fl=open('inject.js', 'r')
+	txt=fl.read()
+	fl.close()
+	pyperclip.copy(txt)
+
+
 
 def arrToBarr(arr):
 	x=bytearray(len(arr))
@@ -58,4 +67,5 @@ def getoptions():
 	return jsonify(res)
 	
 if __name__=="__main__":
+	readInject()
 	app.run(host="0.0.0.0", port=5000)
