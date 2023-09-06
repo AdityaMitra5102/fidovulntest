@@ -61,8 +61,6 @@ def getoptions():
 	optdatab64=base64.b64encode(pickle.dumps(optdata)).decode()
 	resp1=requests.post(cloudurl+'/getoptions', data={'data':optdatab64})
 	res1=resp1.text
-	#writeoptionsfile(optdatab64)
-	#res1=getccddata()
 	res=pickle.loads(base64.b64decode(res1.encode()))
 	return jsonify(res)
 	
