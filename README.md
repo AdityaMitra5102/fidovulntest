@@ -11,3 +11,5 @@ It can be made to start on boot.
 
 # Demo video
 https://youtu.be/Lh45VzZqQ60
+
+### Note: This implementation does not contain the support for resident keys but it can be added.
