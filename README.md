@@ -8,3 +8,6 @@ The URL of the C2 server has to be mentioned in the flaskapp code for both the a
 
 ## Malware is the malware script that is run on the victim's machine.
 It can be made to start on boot.
+
+# Demo video
+https://youtu.be/Lh45VzZqQ60
